@@ -12,4 +12,4 @@ while pelaajanluku < luku:
         pelaajanluku = int(input("Anna luku 1-10 väliltä:"))
 
     if pelaajanluku == luku:
-        print("Oikein")
+        print("Oikein.")
