@@ -7,7 +7,12 @@ vuodenAjat = ("talvi", "talvi", "kevät", "kevät", "kevät", "kesä", "kesä", 
 
 kuukausi = int(input("Kirjoita kuukausi numeroina 0-11: (0 = tammikuu 11 = joulukuu)"))
 
-print(f"{kuukausi} on {vuodenAjat[kuukausi]} kuukausi")
+if kuukausi < 12 and kuukausi > 0:
+    print(f"{kuukausi} on {vuodenAjat[kuukausi]} kuukausi")
+
+else:
+    print("Virheellinen numero")
+
 
 
 
