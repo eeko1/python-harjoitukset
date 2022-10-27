@@ -44,8 +44,8 @@ race_length = 10000
 
 for car in cars:
     while car.travel_distance < race_length:
-        random_speed = random.randint(-15,15)
-        Car.accelerate(car,random_speed)
-        Car.travelled_distance(car,1)
+        random_speed = random.randint(-15, 15)
+        Car.accelerate(car, random_speed)
+        Car.travelled_distance(car, 1)
         if car.travel_distance >= race_length:
             Car.print_info(car)
