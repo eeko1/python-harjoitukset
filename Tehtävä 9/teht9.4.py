@@ -13,6 +13,8 @@ class Car:
         self.top_speed = top_speed
         self.odometer = 0
         self.speed = 0
+        self.travel_hours = 0
+        self.travel_distance = 0
 
     def print_info(self):
         print(f"Auton {self.license_plate} "
@@ -29,26 +31,20 @@ class Car:
     def travelled_distance(self, hours):
         self.odometer += self.speed * hours
 
-cars = []
-for i in range(10):
-    bil = Car(f"ABC-{i + 1}", random.randint(100, 200))
-    cars.append(bil)
+    def car_create():
+        cars = []
+            for i in range (10):
+                cars.append(Car("a-"+ str(i), 50))
+            return cars
 
-has_won = False
-while not has_won:
-    for i in cars:
-        i.accelerate(random.randint(-10, 15))
-        i.travelled_distance(1)
-        if i.speed >= 10000:
-            has_won = True
-            print(f"Voittaja on: {i.license_plate}")
-            break
 
-cars.sort()
-print("---------------")
-for i in cars:
-    print(f"Rekisterinumero: {i.license_plate}")
-    print(f"Huippunopeus: {i.top_speed}")
-    print(f"Nykyinen nopeus: {i.speed}")
-    print(f"Kuljettu matka: {i.odometer}")
-    print("---------------")
+cars = car_create()
+race_length = 10000
+
+for car in cars:
+    while car.travel_distance < race_length:
+        random_speed = random.randint(-15,15)
+        Car.accelerate(car,random_speed)
+        Car.travelled_distance(car,1)
+        if car.travel_distance >= race_length:
+            Car.print_info(car)
