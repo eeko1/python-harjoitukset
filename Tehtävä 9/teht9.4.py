@@ -31,11 +31,12 @@ class Car:
     def travelled_distance(self, hours):
         self.odometer += self.speed * hours
 
-    def car_create():
-        cars = []
-            for i in range (10):
-                cars.append(Car("a-"+ str(i), 50))
-            return cars
+
+def car_create():
+    cars = []
+    for i in range (10):
+        cars.append(Car("a-"+ str(i), 50))
+    return cars
 
 
 cars = car_create()
