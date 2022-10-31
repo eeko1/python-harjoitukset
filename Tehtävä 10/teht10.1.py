@@ -21,14 +21,14 @@ class Elevator:
         elif self.current == floor:
             print("You are already there")
 
-    def move_up(self):
+    def move_up(self): #kerros_ylös
         while self.current != floor:
             self.current += 1
             if self.current == floor:
                 Elevator.printing(i)
                 print(f"Currently at: Floor{self.current}")
 
-    def move_down(self):
+    def move_down(self): #kerros_alas
         while self.current != floor:
             Elevator.printing(i)
             self.current -= 1
@@ -40,7 +40,7 @@ class Elevator:
         print(self.current)
 
 
-i = Elevator(1,4,1)
+i = Elevator(1,4,1) #laitoin i enkä h
 floor = 1
 
 while floor <= 5:
