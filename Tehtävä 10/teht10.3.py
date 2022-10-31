@@ -43,15 +43,8 @@ class House:
         self.number = number
         self.current = current
         self.Elevators = []
-        for i in range(1, 4):
+        for m in range(1, 4):
             self.Elevators.append(Elevator(1, 50, 1))
-
-
-    def fire_alarm(self):
-        for x in self.elevators:
-            x.elevator_movement(self.low)
-            print("Fire alarm system activated!!!")
-
 
     def drive(self, number, what_floor):
         elevaattori = self.Elevators[number - 1]
@@ -59,6 +52,11 @@ class House:
         if what_floor == 3:
             self.fire_alarm()
         elevaattori.elevator_movement(what_floor)
+
+    def fire_alarm(self):
+        for x in self.elevators:
+            x.elevator_movement(self.low)
+            print("Fire alarm system activated!!!")
 
 i = Elevator(1, 5, 1)
 floor = 1
