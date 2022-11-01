@@ -48,7 +48,7 @@ class House:
 
     def drive(self, number, what_floor):
         elevaattori = self.Elevators[number - 1]
-        print(f"Ajetaan hissiä {number}")
+        print(f"Elevator {number} moving")
         if what_floor == 3:
             self.fire_alarm()
         elevaattori.elevator_movement(what_floor)
